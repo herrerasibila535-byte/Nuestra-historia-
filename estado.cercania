@@ -1,0 +1,15 @@
+export let estado = JSON.parse(localStorage.getItem("estadoAmor")) || {
+  cercania: 0.5,
+  melancolia: 0.3,
+  intensidad: 0.5,
+  visitas: 0,
+  confianza: 0.4
+}
+
+export function actualizarEstado() {
+  estado.visitas++
+  estado.cercania = Math.min(1, estado.cercania + 0.02)
+  estado.melancolia = Math.max(0, estado.melancolia - 0.01)
+  estado.intensidad = Math.min(1, estado.cercania - estado.melancolia + 0.5)
+  localStorage.setItem("estadoAmor", JSON.stringify(estado))
+}
