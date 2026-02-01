@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Crimson+Text:ital@1&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #120000, #000);
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Cinzel', serif;
+  color: #b30000;
+}
+
+canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 20px rgba(179,0,0,.6);
+}
+
+p {
+  font-family: 'Crimson Text', serif;
+  opacity: .8;
+}
